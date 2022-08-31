@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div id="demo"></div>-->
+<!--<button onclick="document.getElementById('demo').innerHTML=Date()">this  time is?</button>-->
+<!--c2-->
+<!--<p> nhấn vào để xem ngày giờ</p>-->
+<!--<button onclick="displayDate()">this time</button>-->
+<!--<p id="demo"></p>-->
+<!--<script>document.getElementById('demo').innerHTML=Date()</script>-->
+<!--tính năm nhuận-->
+<script>
+    let year= +prompt('Enter a year')
+    let isaleapyear=true
+        if (year%4==0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    isaleapyear = true
+                } else {
+                    isNOTaleapyear = true
+                }
+            }
+        }
+        if (isaleapyear){
+            alert(year+'is a leap year')
+        }
+        else {
+            alert( year+'is are no leap year')
+        }
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

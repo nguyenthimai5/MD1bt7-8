@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bt4.css">
+</head>
+<body>
+<table width="70%">
+    <tr>
+        <td id="amount">Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+    </tr>
+    <tr>
+        <td><input type="text"></td>
+        <td><select id="select1" onchange="money()">
+            <option  value="VNĐ">VNĐ</option>
+            <option value="USD">USD</option>
+        </select></td>
+        <td><select id="select2" onchange="money()">
+            <option value="VNĐ">VNĐ</option>
+            <option value="USD">USD</option>
+        </select></td>
+        <td><button onclick="money()" >Convert</button></td>
+    </tr>
+
+</table>
+
+<h1 id="VNĐ"></h1><br>
+<h1 id="USD"></h1>
+
+<script>
+    function money(){
+        let amount= +document.getElementById('amount').value;
+        console.log('amount',amount)
+        let select1 = document.getElementById('select1').value;
+       console.log('select1',select1)
+             let select2 = document.getElementById('select2').value;
+       console.log('select2',select2)
+        let result= amount/23000
+        console.log('result',result)
+       if (select1==="USD"){
+           document.getElementById("select2").value='USD';
+           document.getElementById("result").innerText="result"
+       }
+else{
+    document.getElementById("result").innerText="amount*23000"
+       }
+
+    }
+
+
+</script>
+
+</body>
+</html>

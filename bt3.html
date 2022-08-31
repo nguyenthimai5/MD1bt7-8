@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--cách 1-->
+<label>bán kính</label>
+<input id="radius" type="text">
+<button onclick="dientichvachuvihinhtron()"> tính diệ tích và chu vi hình tròn</button>
+<h1 id="chu_vi"></h1><br>
+<h1 id="dien_tich"></h1>
+<script>
+    function dientichvachuvihinhtron() {
+        let radius = document.getElementById('radius').value;
+        let chuvi=2*Math.PI*radius;
+        let dientich = Math.PI*Math.pow(radius,2);
+        document.getElementById('chu_vi').innerHTML='Chu vi hình tròn:'+chuvi;
+        document.getElementById('dien_tich').innerHTML='diện tích hình tròn:'+dientich;
+    }
+</script>
+<!--cách 2-->
+<!--<script>-->
+<!--  let a =Number(prompt("nhập độ dài bán kính vào"))-->
+<!-- const PI= Math.PI-->
+<!--  let dienTichHinhTron= a*a*PI-->
+<!--  // let denTICH=PI*Math.pow(chu vi,2)-->
+<!--  document.write("dienTichHinhTron:"+dienTichHinhTron+'<br/>')-->
+<!--  let chuViHinhTron=2*a*3.14-->
+<!--  document.write("chuViHinhTron:"+chuViHinhTron)-->
+<!--</script>-->
+</body>
+</html>

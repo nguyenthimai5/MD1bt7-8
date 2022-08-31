@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--c1-->
+<!--<script>-->
+<!--</script>-->
+"<!--  let diemLy =Number("nhập điểm lý vào")-->
+<!--  let diemHoa =Number("nhập điểm hoá vào")-->
+<!--  let diemSinh=Number("nhập điểm sinh vào")-->
+<!--  let diemTrungBinhBaMon=(diemLy+diemHoa+diemSinh)/3-->
+<!--  document.write("diemTrungBinhBaMon:"+diemTrungBinhBaMon+<br/>)-->
+<!--  let tongBaSo=diemLy+diemHoa+diemSinh-->
+<!--  document.write("tongBaSo:"+tongBaSo)-->
+<input placeholder=" nhập điểm môn lý" type="text" id="1">
+<input placeholder="nhập đieemr môn hoá" type="text" id="2">
+<input placeholder="nhập đieemr môn sinh" type="text" id="3">
+<h1 id="dtb"> </h1>
+<h1 id="td"></h1>
+<button onclick="mai()">click</button>
+<script>
+   function mai() {
+       let diemLy=+document.getElementById('1').value;
+       console.log("diemLy--->",diemLy)
+       let diemHoa=+document.getElementById('2').value;
+       console.log("diemHoa--->",diemHoa)
+       let diemSinh=+document.getElementById('3').value;
+       console.log("diemSinh--->",diemSinh)
+       let tongDiem=diemHoa+diemSinh+diemLy
+       // let diemTrungBinhBaMon=(diemLy+diemHoa+diemSinh)/3
+       document.getElementById("dtb").innerHTML="điểm trung bình ba môn:"+tongDiem/3
+       document.getElementById("td").innerHTML="tổng điểm ba môn:"+ tongDiem
+   }
+</script>
+
+</body>
+</html>
